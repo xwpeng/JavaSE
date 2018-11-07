@@ -53,7 +53,7 @@ public class LongLiveSocket {
 
     private final Object mLock = new Object();
     private Socket mSocket;  // guarded by mLock
-    private boolean mClosed; // guarded by mLock
+    private boolean mClosed;
 
     private final Runnable mHeartBeatTask = new Runnable() {
         @Override
