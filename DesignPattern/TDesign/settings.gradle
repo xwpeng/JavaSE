@@ -1,0 +1,1 @@
+include ':app', ':tbuilder', ':tprinciple', ':tfactroy', ':tabstractfactory', ':tstragety', ':tstate', ':titerator', ':tcommand', ':tobserver'

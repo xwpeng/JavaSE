@@ -1,7 +1,11 @@
 package com.xwpeng.tclone;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
-//       tClone();
-        tClone2();
+       tClone();
+//        tClone2();
     }
 
     /**
@@ -23,13 +27,17 @@ public class MainActivity extends AppCompatActivity {
         Student student = new Student();
         student.age = 24;
         student.name = "neisong";
+        student.books = new ArrayList<>();
+        student.books.add("111");
         Student student2 = (Student)student.clone();
-        System.out.println("Age:" + student2.age + " " + "Name:" + student2.name);
-        System.out.println("---------------------");
+        System.out.println(student.toString());
+        System.out.println(student2.toString());
         student2.age = 23;
+        student2.books.add("222");
         //克隆后得到的是一个新的对象，所以重新写的是student2这个对象的值
-        System.out.println(student.age);
-        System.out.println(student2.age);
+        System.out.println(student.toString());
+        System.out.println(student2.toString());
+        Intent intent = new Intent();
     }
 
     /**
