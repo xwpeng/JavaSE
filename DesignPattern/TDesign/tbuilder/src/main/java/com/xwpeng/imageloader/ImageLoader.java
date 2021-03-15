@@ -26,7 +26,7 @@ public class ImageLoader {
         this.mConfig = config;
     }
 
-    public static class ImageLoaderHolder {
+    private static class ImageLoaderHolder {
         private static ImageLoader inStance = new ImageLoader();
     }
 

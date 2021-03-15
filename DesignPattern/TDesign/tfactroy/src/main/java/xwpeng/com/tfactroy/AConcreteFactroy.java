@@ -1,7 +1,5 @@
 package xwpeng.com.tfactroy;
 
-import android.view.View;
-
 public class AConcreteFactroy extends AFactroy{
 
 
